@@ -8,7 +8,25 @@ import { MatSidenav } from '@angular/material/sidenav';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'business-reporting-tool';
+  title = 'PCBIP';
+  menuList = [{
+    menuIcon: 'home',
+    menuText: 'Home',
+    routerLink: '/home'
+  },{
+    menuIcon: 'person',
+    menuText: 'Profile',
+    routerLink: '/profile'
+  },{
+    menuIcon: 'info',
+    menuText: 'About',
+    routerLink: '/about'
+  },{
+    menuIcon: 'help',
+    menuText: 'Help',
+    routerLink: '/help'
+  }];
+
   @ViewChild(MatSidenav)
   sidenav!: MatSidenav;
 
@@ -24,6 +42,9 @@ export class AppComponent {
          this.sidenav.open();
        }
      });
+   }
+
+   clickMenu(menu: any) {
    }
 
 
